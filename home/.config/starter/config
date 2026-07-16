@@ -1,0 +1,6 @@
+# Placeholder file, symlinked into ~/.config/starter/config by home.nix
+# via mkOutOfStoreSymlink. Edit this file in the repo and the change shows
+# up at ~/.config/starter/config immediately -- no rebuild needed, because
+# it's a real symlink to this path, not a copy.
+#
+# Replace this with a real dotfile once you're comfortable with the mechanism.

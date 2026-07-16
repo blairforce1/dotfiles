@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Blocks commits that hardcode a literal /home/<user> path in tracked files.
+# This repo deliberately carries no personal identity of its own (see
+# CLAUDE.md's "Deliberate decisions") -- real identity belongs only in
+# gitignored local.nix, and paths should use $HOME (shell) or
+# config.home.homeDirectory (Nix) instead. Added after the pattern slipped
+# into settings.json twice (herdr hook, statusline command).
+set -euo pipefail
+
+# First char after /home/ excludes '.' so this repo's own
+# ${dotfiles}/home/.config, .../home/.claude etc. (dotfiles/dotdirs, not
+# usernames) don't false-positive.
+pattern='/home/[A-Za-z0-9_-][A-Za-z0-9_.-]*'
+found=0
+
+while IFS= read -r -d '' file; do
+  matches=$(git show ":$file" 2>/dev/null | grep -nE "$pattern" || true)
+  if [ -n "$matches" ]; then
+    found=1
+    echo "pre-commit: hardcoded home path in $file:"
+    echo "$matches" | sed 's/^/  /'
+  fi
+done < <(git diff --cached --name-only --diff-filter=ACM -z)
+
+if [ "$found" -eq 1 ]; then
+  echo
+  echo "Use \$HOME (shell commands) or config.home.homeDirectory (Nix) instead." >&2
+  echo "Deliberate, non-identifying example path? Commit with --no-verify." >&2
+  exit 1
+fi

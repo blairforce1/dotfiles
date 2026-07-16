@@ -1,0 +1,28 @@
+{
+  "editorMode": "normal",
+  "env": {
+    "CLAUDE_CODE_DISABLE_MOUSE_CLICKS": "1"
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "bash \"$HOME/.claude/hooks/herdr-agent-state.sh\" session",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ]
+  },
+  "permissions": {
+    "defaultMode": "plan"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash \"$HOME/.claude/statusline-command.sh\""
+  },
+  "tui": "fullscreen"
+}

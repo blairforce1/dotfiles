@@ -1,0 +1,35 @@
+# Real config, symlinked into ~/.config/lazygit/config.yml by home.nix via
+# mkOutOfStoreSymlink. Edit this file directly -- no rebuild needed.
+# Full reference for every option: `lazygit --config`.
+#
+# lazygit has no built-in named themes (unlike WezTerm/herdr), so these are
+# real Gruvbox Dark hex values rather than a theme name -- keeps lazygit on
+# the same palette as everything else even outside this WezTerm profile.
+gui:
+  theme:
+    activeBorderColor:
+      - '#b8bb26' # bright green
+      - bold
+    inactiveBorderColor:
+      - '#928374' # gray
+    searchingActiveBorderColor:
+      - '#8ec07c' # bright aqua
+      - bold
+    optionsTextColor:
+      - '#83a598' # bright blue
+    selectedLineBgColor:
+      - '#3c3836' # bg1
+    inactiveViewSelectedLineBgColor:
+      - '#3c3836' # bg1
+    cherryPickedCommitFgColor:
+      - '#83a598' # bright blue
+    cherryPickedCommitBgColor:
+      - '#8ec07c' # bright aqua
+    markedBaseCommitFgColor:
+      - '#83a598' # bright blue
+    markedBaseCommitBgColor:
+      - '#fabd2f' # bright yellow
+    unstagedChangesColor:
+      - '#fb4934' # bright red
+    defaultFgColor:
+      - '#ebdbb2' # fg1

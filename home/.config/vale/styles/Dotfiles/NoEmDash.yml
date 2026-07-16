@@ -1,0 +1,8 @@
+extends: existence
+message: "Avoid the em dash '—' -- use a plain dash '-' instead."
+level: error
+# `tokens` wraps each entry in a word-boundary regex (\b...\b), which never
+# matches a symbol with non-word characters on both sides (e.g. "test —
+# it"). `raw` skips that wrapping.
+raw:
+  - '—'

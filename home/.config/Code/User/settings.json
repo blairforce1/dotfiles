@@ -1,0 +1,22 @@
+{
+  "window.autoDetectColorScheme": true,
+  "dev.containers.dockerComposePath": "podman-compose",
+  "dev.containers.dockerPath": "podman",
+  "dev.containers.dockerSocketPath": "/run/user/1000/podman/podman.sock",
+  "dev.containers.defaultExtensions": ["mutantdino.resourcemonitor"],
+  "files.autoSave": "afterDelay",
+  "editor.selectionClipboard": false,
+  "git.autofetch": true,
+  "remote.autoForwardPortsSource": "hybrid",
+  "git.confirmSync": false,
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+  "terminal.integrated.fontLigatures.enabled": true,
+  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.minimumContrastRatio": 1,
+  "resharper.region.region": "Europe",
+  "resharper.dataSharing.allowDataSharing": false,
+  "github.copilot.enable": { "*": false },
+  "chat.disableAIFeatures": true,
+  "claudeCode.preferredLocation": "panel",
+  "terminal.integrated.mouseWheelScrollSensitivity": 3
+}
