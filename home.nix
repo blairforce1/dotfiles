@@ -267,6 +267,7 @@ in
         golang.go
         ms-kubernetes-tools.vscode-kubernetes-tools
         ms-azuretools.vscode-azureresourcegroups
+        ms-azuretools.vscode-containers
         mkhl.direnv # loads each project's flake devShell into VS Code's terminal/LSPs
         marp-team.marp-vscode # slide preview/export for the marp-cli package above
       ];
