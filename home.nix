@@ -263,7 +263,6 @@ in
         anthropic.claude-code
 
         # new, for the .NET/Go/Kubernetes/Azure/direnv workflow
-        ms-dotnettools.csharp # base C# language server (csdevkit is proprietary/optional, add later if wanted)
         golang.go
         ms-kubernetes-tools.vscode-kubernetes-tools
         ms-azuretools.vscode-azureresourcegroups
