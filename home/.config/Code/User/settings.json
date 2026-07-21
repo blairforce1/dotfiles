@@ -18,5 +18,14 @@
   "github.copilot.enable": { "*": false },
   "chat.disableAIFeatures": true,
   "claudeCode.preferredLocation": "panel",
-  "terminal.integrated.mouseWheelScrollSensitivity": 3
+  "terminal.integrated.mouseWheelScrollSensitivity": 3,
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ],
+  "editor.minimap.enabled": false
 }

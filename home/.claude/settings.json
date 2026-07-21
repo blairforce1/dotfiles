@@ -1,28 +1,36 @@
 {
-  "editorMode": "normal",
   "env": {
     "CLAUDE_CODE_DISABLE_MOUSE_CLICKS": "1"
+  },
+  "permissions": {
+    "defaultMode": "plan"
   },
   "hooks": {
     "SessionStart": [
       {
+        "matcher": "*",
         "hooks": [
           {
+            "type": "command",
             "command": "bash \"$HOME/.claude/hooks/herdr-agent-state.sh\" session",
-            "timeout": 10,
-            "type": "command"
+            "timeout": 10
           }
-        ],
-        "matcher": "*"
+        ]
       }
     ]
-  },
-  "permissions": {
-    "defaultMode": "plan"
   },
   "statusLine": {
     "type": "command",
     "command": "bash \"$HOME/.claude/statusline-command.sh\""
   },
-  "tui": "fullscreen"
+  "extraKnownMarketplaces": {
+    "blairforce1": {
+      "source": {
+        "source": "git",
+        "url": "git@github.com:blairforce1/claude-plugins"
+      }
+    }
+  },
+  "tui": "fullscreen",
+  "editorMode": "normal"
 }
